@@ -14,6 +14,18 @@ Files needed from https://hcad.org/pdata/pdata-property-downloads.html
 - structural_elem1.txt
 - structural_elem2.txt
 
+## Prerequisites
+
+- Make sure you have installed the LTS version of Node (nvm install --lts / nvm use --lts)
+
+## ENV Variables Required (.env file)
+
+- MONGODB_API_KEY = "`<string>`"
+- MONGODB_API_ID = "`<string>`"
+- MONGODB_DATA_SOURCE = "`<string>`"
+- MONGODB_DATABASE = "`<string>`"
+- RECORDS_SPLIT = `<int>`
+
 ## Step 1
 
 If there are any output-HCAD-XXXX files in the /files directory, delete them.
@@ -27,6 +39,10 @@ The file `output-HCAD-50.json` is just a test file of the first 50 records. Thes
 ## Step 2
 
 Before loading to Mongo, remove all existing documents. Make sure you don't remove the collection or indexes!
+
+Preferably, use MongoDB Compass - MongoSH...\
+`use fypt`\
+`db.hcad.deleteMany({})`
 
 Import the JSON files (from the /files directory) using `mongoimport`
 

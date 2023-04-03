@@ -4,10 +4,11 @@ import readline from "node:readline/promises";
 //import { dataApi } from '../handlers/mongodb.mjs'
 
 const filePath = "./files";
-const recordsSplit = 500000;
 let hcadMap = new Map();
 
 export async function loadHCAD() {
+  const recordsSplit = process.env.RECORDS_SPLIT;
+
   const outputFile = "output-HCAD";
   // if (fs.existsSync(`${filePath}/${outputFile}`))
   //     fs.unlinkSync(`${filePath}/${outputFile}`)

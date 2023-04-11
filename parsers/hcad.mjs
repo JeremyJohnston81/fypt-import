@@ -121,11 +121,11 @@ async function getOwners() {
 }
 
 async function getBuildingRes() {
-  console.log("Getting Buldling Res...");
+  console.log("Getting Building Res...");
   const fileStream = getFile("building_res.txt");
+
   for await (const row of fileStream) {
     const columns = row.split("\t");
-
     const account = columns[0].trim();
 
     if (columns[2].trim() > 1 || account == "acct" || account == null) continue;
@@ -136,7 +136,7 @@ async function getBuildingRes() {
     const yrUpdated = dateBuilt + " / " + yrRemodel;
 
     const buildingRes = {
-      account: columns[0].trim(),
+      account: account,
       accrDepPct: parseFloat(columns[9]) || 0,
       yrUpdated: yrUpdated,
       structureType: columns[5].trim(),

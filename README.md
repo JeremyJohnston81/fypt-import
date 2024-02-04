@@ -46,4 +46,4 @@ Preferably, use MongoDB Compass - MongoSH...\
 
 Import the JSON files (from the /files directory) using `mongoimport`
 
-mongoimport --uri "mongodb://`<USERNAME>:<PASSWORD>`@tax-watch-prod-shard-00-00-cpsde.mongodb.net:27017,tax-watch-prod-shard-00-01-cpsde.mongodb.net:27017,tax-watch-prod-shard-00-02-cpsde.mongodb.net:27017/fypt?ssl=true&replicaSet=Tax-Watch-Prod-shard-0&readPreference=primary&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-1" --collection hcad --file `output-HCAD-500000.json` --jsonArray
+mongoimport --uri "mongodb+srv://fypt_admin:<password>@fypt.tqlpegl.mongodb.net/fypt" --collection hcad --file `output-HCAD-500000.json` --jsonArray

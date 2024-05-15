@@ -1,6 +1,6 @@
 # FYPT-Importer
 
-This process takes the raw data from HCAD and creates JSON files that are ready to be imported into MondoDB
+This process takes the raw data from HCAD and creates JSON files that are ready to be imported into MongoDB
 
 Files needed from https://hcad.org/pdata/pdata-property-downloads.html
 

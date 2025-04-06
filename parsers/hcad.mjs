@@ -205,12 +205,14 @@ async function getTaxRates() {
   console.log("Getting Taxes, ugh...");
   let taxDistMap = new Map();
 
-  const fileTaxDistricts = getFile("jur_tax_dist_percent_rate.txt");
+  //const fileTaxDistricts = getFile("jur_tax_dist_percent_rate.txt");
+  const fileTaxDistricts = getFile("jur_tax_dist_exempt_value_rate.txt");
   for await (const row of fileTaxDistricts) {
     const columns = row.split("\t");
 
     const taxDist = columns[1].trim();
-    const taxRate = parseFloat(columns[3]) || 0;
+    //const taxRate = parseFloat(columns[3]) || 0;
+    const taxRate = 2.18;
 
     if (taxDist == "tax_dist") continue;
 

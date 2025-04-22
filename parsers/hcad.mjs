@@ -212,7 +212,7 @@ async function getTaxRates() {
 
     const taxDist = columns[1].trim();
     //const taxRate = parseFloat(columns[3]) || 0;
-    const taxRate = 2.18;
+    const taxRate = .0218;
 
     if (taxDist == "tax_dist") continue;
 
